@@ -3,7 +3,7 @@ const { features, getState } = require("@saltcorn/data/db/state");
 
 const ppArray = (v) => {
   if (!v) return "";
-  if (Array.isArray(v)) return v.map((vl) => vl.toString()).join();
+  if (Array.isArray(v)) return v.map((vl) => vl.toString()).join(",");
   return "";
 };
 
@@ -34,7 +34,7 @@ const floatArray = {
   read: (v, attrs) => {
     switch (typeof v) {
       case "string":
-        return v.split();
+        return v ? v.split(",") : undefined;
       default:
         return v;
     }

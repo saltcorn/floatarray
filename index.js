@@ -70,4 +70,6 @@ module.exports = {
   types: [floatArray],
   plugin_name: "floatarray",
   functions: { array_stats },
+  dependencies: ["@saltcorn/visualize"],
+  viewtemplates: [require("./plot.js")],
 };

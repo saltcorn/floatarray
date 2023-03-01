@@ -71,5 +71,5 @@ module.exports = {
   plugin_name: "floatarray",
   functions: { array_stats },
   dependencies: ["@saltcorn/visualize"],
-  viewtemplates: [require("./plot.js")],
+  viewtemplates: [require("./plot.js"), require("./spectrogram")],
 };

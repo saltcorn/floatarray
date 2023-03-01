@@ -99,6 +99,7 @@ const run = async (
   const row = await table.getRow(where, { orderBy: x_field });
   if (!row) return "No row selected";
   const y = row[yfld.name];
+  if (!y) return "";
   const x = xfld ? row[xfld.name] : y.map((yv, i) => i);
   const data = [
     {
